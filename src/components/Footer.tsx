@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <div className="mb-4">
               <img 
-                src="/src/assets/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
-                alt="Mason Vale" 
+                src="/mason-vale-logo.png" 
+                alt="Mason Vale XVI" 
                className="h-12 w-auto"
               />
             </div>
