@@ -1,70 +1,79 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { forceScrollToTop } from '../utils/navigation';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navigateToPage = (path: string) => {
-    if (location.pathname !== path) {
-      navigate(path);
-    }
-    // Always scroll to top after navigation
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+  // Aggressive navigation function that forces scroll to top
+  const handleNavigation = (path: string) => {
+    // Close mobile menu
     setIsMenuOpen(false);
-  };
-
-  // Scroll to top when location changes
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Force scroll to top immediately
+    forceScrollToTop();
+    
+    // Navigate to the path
+    navigate(path);
+    
+    // Force scroll to top again after navigation
+    setTimeout(() => {
+      forceScrollToTop();
+    }, 0);
+    
+    setTimeout(() => {
+      forceScrollToTop();
+    }, 50);
+    
+    setTimeout(() => {
+      forceScrollToTop();
     }, 100);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <button 
+            onClick={() => handleNavigation('/')}
+            className="flex items-center hover:opacity-80 transition-opacity duration-300"
+          >
             <img 
               src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
               alt="Mason Vale" 
               className="h-20 w-auto"
             />
-          </Link>
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => navigateToPage('/')}
+              onClick={() => handleNavigation('/')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Home
             </button>
             <button 
-              onClick={() => navigateToPage('/about')}
+              onClick={() => handleNavigation('/about')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               About
             </button>
             <button 
-              onClick={() => navigateToPage('/services')}
+              onClick={() => handleNavigation('/services')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Services
             </button>
             <button 
-              onClick={() => navigateToPage('/contact')}
+              onClick={() => handleNavigation('/contact')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Contact
@@ -92,25 +101,25 @@ const Navigation: React.FC = () => {
           <div className="md:hidden bg-black bg-opacity-95 py-6">
             <div className="flex flex-col space-y-4">
               <button 
-                onClick={() => navigateToPage('/')}
+                onClick={() => handleNavigation('/')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Home
               </button>
               <button 
-                onClick={() => navigateToPage('/about')}
+                onClick={() => handleNavigation('/about')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 About
               </button>
               <button 
-                onClick={() => navigateToPage('/services')}
+                onClick={() => handleNavigation('/services')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Services
               </button>
               <button 
-                onClick={() => navigateToPage('/contact')}
+                onClick={() => handleNavigation('/contact')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Contact

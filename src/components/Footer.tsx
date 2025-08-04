@@ -1,16 +1,31 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { forceScrollToTop } from '../utils/navigation';
 
 const Footer: React.FC = () => {
-  const location = useLocation();
+  const navigate = useNavigate();
 
-  // Scroll to top when location changes
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Aggressive navigation function that forces scroll to top
+  const handleNavigation = (path: string) => {
+    // Force scroll to top immediately
+    forceScrollToTop();
+    
+    // Navigate to the path
+    navigate(path);
+    
+    // Force scroll to top again after navigation
+    setTimeout(() => {
+      forceScrollToTop();
+    }, 0);
+    
+    setTimeout(() => {
+      forceScrollToTop();
+    }, 50);
+    
+    setTimeout(() => {
+      forceScrollToTop();
     }, 100);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+  };
 
   return (
     <footer className="bg-black text-white py-12">
@@ -25,24 +40,24 @@ const Footer: React.FC = () => {
               />
             </div>
             <div className="flex flex-wrap space-x-6">
-              <Link 
-                to="/" 
+              <button 
+                onClick={() => handleNavigation('/')}
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Home
-              </Link>
-              <Link 
-                to="/services" 
+              </button>
+              <button 
+                onClick={() => handleNavigation('/services')}
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Services
-              </Link>
-              <Link 
-                to="/contact" 
+              </button>
+              <button 
+                onClick={() => handleNavigation('/contact')}
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Contact
-              </Link>
+              </button>
             </div>
           </div>
           
