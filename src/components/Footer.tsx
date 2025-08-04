@@ -34,9 +34,9 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <div className="mb-4">
               <img 
-                src="Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+                src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
                 alt="Mason Vale" 
-               className="h-12 w-auto"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex flex-wrap space-x-6">
