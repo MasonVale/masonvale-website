@@ -27,8 +27,8 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/mason-vale-logo.png" 
-              alt="Mason Vale XVI" 
+              src="/src/assets/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+              alt="Mason Vale" 
               className="h-20 w-auto"
             />
           </Link>
