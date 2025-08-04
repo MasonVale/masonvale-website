@@ -1,38 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    // Check if we're on the home page
-    if (window.location.pathname !== '/') {
-      // If not on home page, navigate to home first
-      window.location.href = '/';
-      return;
-    }
-    // If already on home page, scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
-  const scrollToContact = () => {
-    // Check if we're on the contact page
-    if (window.location.pathname !== '/contact') {
-      // If not on contact page, navigate to contact first
-      window.location.href = '/contact';
-      return;
-    }
-    // If already on contact page, scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const scrollToServices = () => {
-    // Check if we're on the services page
-    if (window.location.pathname !== '/services') {
-      // If not on services page, navigate to services first
-      window.location.href = '/services';
-      return;
-    }
-    // If already on services page, scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-black text-white py-12">
@@ -47,24 +17,24 @@ const Footer: React.FC = () => {
               />
             </div>
             <div className="flex flex-wrap space-x-6">
-              <button 
-                onClick={scrollToTop}
+              <Link 
+                to="/" 
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Home
-              </button>
-              <button 
-                onClick={scrollToServices}
+              </Link>
+              <Link 
+                to="/services" 
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Services
-              </button>
-              <button 
-                onClick={scrollToContact}
+              </Link>
+              <Link 
+                to="/contact" 
                 className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
           

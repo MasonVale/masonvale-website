@@ -1,41 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      // If not on home page, navigate to home first
-      window.location.href = `/#${sectionId}`;
-      return;
+  const navigateToPage = (path: string) => {
+    if (location.pathname !== path) {
+      navigate(path);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
-
-  const scrollToTop = () => {
-    if (location.pathname !== '/') {
-      // If not on home page, navigate to home first
-      window.location.href = '/';
-      return;
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
-
-  const scrollToTopOfPage = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsMenuOpen(false);
   };
 
@@ -55,43 +36,25 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={scrollToTop}
+              onClick={() => navigateToPage('/')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Home
             </button>
             <button 
-              onClick={() => {
-                if (location.pathname !== '/about') {
-                  window.location.href = '/about';
-                } else {
-                  scrollToTopOfPage();
-                }
-              }}
+              onClick={() => navigateToPage('/about')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               About
             </button>
             <button 
-              onClick={() => {
-                if (location.pathname !== '/services') {
-                  window.location.href = '/services';
-                } else {
-                  scrollToTopOfPage();
-                }
-              }}
+              onClick={() => navigateToPage('/services')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Services
             </button>
             <button 
-              onClick={() => {
-                if (location.pathname !== '/contact') {
-                  window.location.href = '/contact';
-                } else {
-                  scrollToTopOfPage();
-                }
-              }}
+              onClick={() => navigateToPage('/contact')}
               className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
             >
               Contact
@@ -119,46 +82,25 @@ const Navigation: React.FC = () => {
           <div className="md:hidden bg-black bg-opacity-95 py-6">
             <div className="flex flex-col space-y-4">
               <button 
-                onClick={scrollToTop}
+                onClick={() => navigateToPage('/')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Home
               </button>
               <button 
-                onClick={() => {
-                  if (location.pathname !== '/about') {
-                    window.location.href = '/about';
-                  } else {
-                    scrollToTopOfPage();
-                  }
-                  setIsMenuOpen(false);
-                }}
+                onClick={() => navigateToPage('/about')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 About
               </button>
               <button 
-                onClick={() => {
-                  if (location.pathname !== '/services') {
-                    window.location.href = '/services';
-                  } else {
-                    scrollToTopOfPage();
-                  }
-                  setIsMenuOpen(false);
-                }}
+                onClick={() => navigateToPage('/services')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Services
               </button>
               <button 
-                onClick={() => {
-                  if (location.pathname !== '/contact') {
-                    window.location.href = '/contact';
-                  } else {
-                    scrollToTopOfPage();
-                  }
-                  setIsMenuOpen(false);
-                }}
+                onClick={() => navigateToPage('/contact')}
                 className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
               >
                 Contact
