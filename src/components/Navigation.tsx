@@ -14,15 +14,20 @@ const Navigation: React.FC = () => {
   const navigateToPage = (path: string) => {
     if (location.pathname !== path) {
       navigate(path);
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    // Always scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
     setIsMenuOpen(false);
   };
 
   // Scroll to top when location changes
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
@@ -32,7 +37,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/src/assets/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+              src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
               alt="Mason Vale" 
               className="h-20 w-auto"
             />
