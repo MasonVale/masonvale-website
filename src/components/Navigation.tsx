@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+            <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(139, 150, 145, 0.3)', borderColor: '#8B9691' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
@@ -54,30 +54,30 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => handleNavigation('/')}
-              className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => handleNavigation('/about')}
-              className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => handleNavigation('/services')}
-              className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
-            >
-              Services
-            </button>
-            <button 
-              onClick={() => handleNavigation('/contact')}
-              className="font-sans text-white hover:text-gold-400 transition-colors duration-300"
-            >
-              Contact
-            </button>
+                               <button 
+                     onClick={() => handleNavigation('/')}
+                     className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Home
+                   </button>
+                   <button 
+                     onClick={() => handleNavigation('/about')}
+                     className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     About
+                   </button>
+                   <button 
+                     onClick={() => handleNavigation('/services')}
+                     className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Services
+                   </button>
+                   <button 
+                     onClick={() => handleNavigation('/contact')}
+                     className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Contact
+                   </button>
             <a 
               href="tel:07767812992"
               className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold px-4 py-2 rounded-full transition-colors duration-300"
@@ -88,42 +88,42 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-white hover:text-gold-400 transition-colors duration-300"
-          >
+                           <button
+                   onClick={toggleMenu}
+                   className="md:hidden text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                 >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-black bg-opacity-95 py-6">
+                       {/* Mobile Menu */}
+               {isMenuOpen && (
+                 <div className="md:hidden py-6 border-t" style={{ backgroundColor: 'rgba(139, 150, 145, 0.3)', borderColor: '#8B9691' }}>
             <div className="flex flex-col space-y-4">
-              <button 
-                onClick={() => handleNavigation('/')}
-                className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => handleNavigation('/about')}
-                className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => handleNavigation('/services')}
-                className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => handleNavigation('/contact')}
-                className="font-sans text-white hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
-              >
-                Contact
-              </button>
+                                   <button 
+                       onClick={() => handleNavigation('/')}
+                       className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
+                     >
+                       Home
+                     </button>
+                     <button 
+                       onClick={() => handleNavigation('/about')}
+                       className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
+                     >
+                       About
+                     </button>
+                     <button 
+                       onClick={() => handleNavigation('/services')}
+                       className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
+                     >
+                       Services
+                     </button>
+                     <button 
+                       onClick={() => handleNavigation('/contact')}
+                       className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300 px-4 py-2 text-left"
+                     >
+                       Contact
+                     </button>
               <a 
                 href="tel:07767812992"
                 className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold px-4 py-2 rounded-full transition-colors duration-300 mx-4 w-fit"

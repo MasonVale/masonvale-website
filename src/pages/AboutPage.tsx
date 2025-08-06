@@ -34,15 +34,15 @@ const AboutPage: React.FC = () => {
 
 
   return (
-    <div className="min-h-screen bg-white pt-24">
+    <div className="min-h-screen pt-20 bg-luxury-800">
       {/* Hero Section */}
-      <section className="relative py-4 lg:py-6 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 lg:py-32 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-4 animate-fade-in-up">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
               About Mason Vale
             </h1>
-            <p className="font-sans text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="font-sans text-xl text-gold-400 max-w-3xl mx-auto">
               Transforming spaces with precision, passion, and unparalleled craftsmanship
             </p>
           </div>
@@ -50,7 +50,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-8 lg:py-12 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-luxury-50 to-luxury-100 relative overflow-hidden">
         {/* Background Graphics */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-32 right-10 w-40 h-40 border border-gold-200 rounded-full"></div>
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
             <div className="animate-slide-in-left">
               <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/masonvale-website/project-images/47157429-4b23-49de-b9d3-231fd4da56da.JPG"
                   alt="Luxury Renovation Project"
                   className="rounded-2xl shadow-2xl"
                 />
@@ -124,8 +124,8 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className="animate-slide-in-right">
-              <div className="bg-gray-900 p-8 rounded-2xl text-white">
-                <blockquote className="font-serif text-xl italic text-white mb-6">
+              <div className="bg-luxury-300 p-8 rounded-2xl text-gray-900">
+                <blockquote className="font-serif text-xl italic text-gray-900 mb-6">
                   "Every detail matters and every project reflects the highest standards of craftsmanship and care."
                 </blockquote>
                 <div className="flex items-center space-x-4">
@@ -133,8 +133,8 @@ const AboutPage: React.FC = () => {
                     <Users className="w-6 h-6 text-black" />
                   </div>
                   <div>
-                    <div className="font-sans font-semibold">Mason Vale Team</div>
-                    <div className="font-sans text-sm text-gray-300">Dedicated to Excellence</div>
+                    <div className="font-sans font-semibold text-gray-900">Mason Vale Team</div>
+                    <div className="font-sans text-sm text-gray-600">Dedicated to Excellence</div>
                   </div>
                 </div>
               </div>

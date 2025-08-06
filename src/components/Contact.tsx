@@ -3,30 +3,30 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-gray-900 text-white">
+    <section id="contact" className="py-20 lg:py-32 bg-luxury-50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Let's Talk
           </h2>
-          <p className="font-sans text-xl md:text-2xl text-gold-400 font-light">
+          <p className="font-sans text-xl md:text-2xl text-gold-600 font-light">
             Your Vision. Our Expertise.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="animate-slide-in-left">
+          <div>
             <div className="space-y-8">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm text-gray-400 mb-1">Phone</p>
+                  <p className="font-sans text-sm text-gray-600 mb-1">Phone</p>
                   <a 
                     href="tel:07767812992" 
-                    className="font-sans text-lg hover:text-gold-400 transition-colors duration-300"
+                    className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                   >
                     07767812992
                   </a>
@@ -38,10 +38,10 @@ const Contact: React.FC = () => {
                   <Mail className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm text-gray-400 mb-1">Email</p>
+                  <p className="font-sans text-sm text-gray-600 mb-1">Email</p>
                   <a 
                     href="mailto:jake@mason-vale.com" 
-                    className="font-sans text-lg hover:text-gold-400 transition-colors duration-300"
+                    className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                   >
                     jake@mason-vale.com
                   </a>
@@ -53,8 +53,8 @@ const Contact: React.FC = () => {
                   <MapPin className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm text-gray-400 mb-1">Address</p>
-                  <p className="font-sans text-lg">
+                  <p className="font-sans text-sm text-gray-600 mb-1">Address</p>
+                  <p className="font-sans text-lg text-gray-900">
                     167–169 Great Portland Street<br />
                     London W1
                   </p>
@@ -64,37 +64,37 @@ const Contact: React.FC = () => {
 
             {/* Social Links */}
             <div className="mt-12">
-              <p className="font-sans text-lg mb-6">Follow Us</p>
+              <p className="font-sans text-lg mb-6 text-gray-900">Follow Us</p>
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
+                  className="w-12 h-12 bg-luxury-600 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
                 >
-                  <Facebook className="w-5 h-5 group-hover:text-black" />
+                  <Facebook className="w-5 h-5 text-white group-hover:text-black" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
+                  className="w-12 h-12 bg-luxury-600 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
                 >
-                  <Instagram className="w-5 h-5 group-hover:text-black" />
+                  <Instagram className="w-5 h-5 text-white group-hover:text-black" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
+                  className="w-12 h-12 bg-luxury-600 rounded-full flex items-center justify-center hover:bg-gold-500 transition-colors duration-300 group"
                 >
-                  <Linkedin className="w-5 h-5 group-hover:text-black" />
+                  <Linkedin className="w-5 h-5 text-white group-hover:text-black" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="animate-slide-in-right flex items-center">
-            <div className="bg-gray-800 p-8 rounded-xl w-full text-center">
-              <h3 className="font-serif text-3xl font-semibold mb-6 text-white">
+          <div className="flex items-center">
+            <div className="bg-luxury-200 p-8 rounded-xl w-full text-center">
+              <h3 className="font-serif text-3xl font-semibold mb-6 text-gray-900">
                 Ready to Start?
               </h3>
-              <p className="font-sans text-gray-300 mb-8">
+              <p className="font-sans text-gray-700 mb-8">
                 Let's discuss your luxury construction project today.
               </p>
               
@@ -108,7 +108,7 @@ const Contact: React.FC = () => {
                 
                 <a
                   href="mailto:jake@mason-vale.com"
-                  className="block border-2 border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black font-sans font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                  className="block border-2 border-gold-500 text-gold-600 hover:bg-gold-500 hover:text-black font-sans font-semibold py-4 px-8 rounded-lg transition-all duration-300"
                 >
                   Send Email
                 </a>

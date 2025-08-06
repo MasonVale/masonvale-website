@@ -1,48 +1,12 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Send, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form logic would go here
-    console.log('Contact form submission:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-      });
-    }, 3000);
-  };
 
   return (
-    <div className="min-h-screen w-full pt-20">
+    <div className="min-h-screen w-full pt-20 bg-luxury-800">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gray-900 text-white">
+      <section className="py-20 lg:py-32 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Get In Touch
@@ -56,137 +20,7 @@ const ContactPage: React.FC = () => {
       {/* Contact Form & Info */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div className="animate-slide-in-left">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Start Your Project
-              </h2>
-              
-              {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                  <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                  <h3 className="font-serif text-2xl font-semibold text-green-800 mb-2">
-                    Thank You!
-                  </h3>
-                  <p className="font-sans text-green-700">
-                    We've received your message and will get back to you within 24 hours.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Your phone number"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                        Service Interest
-                      </label>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300"
-                      >
-                        <option value="">Select a service</option>
-                        <option value="development">Development & Renovations</option>
-                        <option value="interiors">Tailored Interiors</option>
-                        <option value="outdoor">Outdoor Lifestyle</option>
-                        <option value="smart">Smart Technologies</option>
-                        <option value="consultation">General Consultation</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                      Project Budget Range
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="50k-100k">£50,000 - £100,000</option>
-                      <option value="100k-250k">£100,000 - £250,000</option>
-                      <option value="250k-500k">£250,000 - £500,000</option>
-                      <option value="500k-1m">£500,000 - £1,000,000</option>
-                      <option value="1m+">£1,000,000+</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-sans text-sm font-medium text-gray-700 mb-2">
-                      Project Details *
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-300 resize-vertical"
-                      placeholder="Tell us about your project, timeline, and any specific requirements..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                  >
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </button>
-                </form>
-              )}
-            </div>
-
+          <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
             <div className="animate-slide-in-right">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">

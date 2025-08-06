@@ -30,7 +30,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-luxury-50 to-luxury-100 relative overflow-hidden">
       {/* Background Graphics */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-32 right-10 w-40 h-40 border border-gold-200 rounded-full"></div>
@@ -38,14 +38,14 @@ const About: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             About Us
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-slide-in-left">
+          <div>
             <p className="font-sans text-lg leading-relaxed text-gray-700 mb-8">
               We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
             </p>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="animate-slide-in-right">
+          <div>
             <h3 className="font-serif text-2xl font-semibold text-gray-900 mb-6">
               We are committed to:
             </h3>
@@ -78,8 +78,8 @@ const About: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-gray-900 p-6 rounded-xl text-white">
-              <blockquote className="font-serif text-lg italic text-white">
+            <div className="bg-luxury-300 p-6 rounded-xl text-gray-900">
+              <blockquote className="font-serif text-lg italic text-gray-900">
                 "Every detail matters and every project reflects the highest standards of craftsmanship and care."
               </blockquote>
             </div>

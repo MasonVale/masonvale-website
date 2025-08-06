@@ -26,7 +26,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section className="py-20 lg:py-32 bg-luxury-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
@@ -38,8 +38,7 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-luxury-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-200 transition-colors duration-300">
                 <service.icon className="w-8 h-8 text-gold-600" />

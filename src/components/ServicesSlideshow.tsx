@@ -7,21 +7,21 @@ const ServicesSlideshow: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/masonvale-website/project-images/12c63aa5-6ee6-4f2f-a405-ce4b1dd9383c.JPG',
       details: 'Transform your vision into reality with our full-service construction and renovation expertise.'
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/masonvale-website/project-images/ec980f00-8f94-4829-ae1e-724f1189b70d.JPG',
       details: 'Create stunning interiors that reflect your personal style and enhance your lifestyle.'
     },
     {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: 'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/masonvale-website/project-images/12f23b25-8db0-4b38-bb5d-1ea0908be0ea.JPG',
       details: 'Design and build exceptional outdoor living spaces that extend your home seamlessly.'
     },
     {
@@ -49,25 +49,25 @@ const ServicesSlideshow: React.FC = () => {
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section className="py-20 lg:py-32 bg-luxury-50" style={{ backgroundColor: '#f5f6f5' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
             Our Services
           </h2>
@@ -152,8 +152,8 @@ const ServicesSlideshow: React.FC = () => {
             <div
               key={index}
               onClick={() => goToSlide(index)}
-              className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 ${
-                index === currentIndex ? 'ring-2 ring-gold-500 scale-105' : ''
+              className={`bg-luxury-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                index === currentIndex ? 'ring-2 ring-gold-500' : ''
               }`}
             >
               <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mb-4">

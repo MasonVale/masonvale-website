@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-12">
+            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#77817E', borderColor: '#6A7470' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -40,24 +40,24 @@ const Footer: React.FC = () => {
               />
             </div>
             <div className="flex flex-wrap space-x-6">
-              <button 
-                onClick={() => handleNavigation('/')}
-                className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => handleNavigation('/services')}
-                className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => handleNavigation('/contact')}
-                className="font-sans text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                Contact
-              </button>
+                                 <button 
+                     onClick={() => handleNavigation('/')}
+                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Home
+                   </button>
+                   <button 
+                     onClick={() => handleNavigation('/services')}
+                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Services
+                   </button>
+                   <button 
+                     onClick={() => handleNavigation('/contact')}
+                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Contact
+                   </button>
             </div>
           </div>
           
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               Jake Amrit
             </p>
             <p className="font-sans text-gray-400 text-sm mt-1">
-              Other Names
+              Dave Warah
             </p>
           </div>
         </div>

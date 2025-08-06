@@ -7,7 +7,7 @@ import Contact from '../components/Contact';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-luxury-50">
       <Hero />
       <About />
       <div id="services">

@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      image: '/masonvale-website/project-images/12c63aa5-6ee6-4f2f-a405-ce4b1dd9383c.JPG',
       features: [
         'New Build Construction',
         'Period Property Restoration',
@@ -30,7 +30,7 @@ const ServicesPage: React.FC = () => {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      image: '/masonvale-website/project-images/ec980f00-8f94-4829-ae1e-724f1189b70d.JPG',
       features: [
         'Luxury Interior Design',
         'Custom Furniture & Joinery',
@@ -53,7 +53,7 @@ const ServicesPage: React.FC = () => {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: 'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      image: '/masonvale-website/project-images/12f23b25-8db0-4b38-bb5d-1ea0908be0ea.JPG',
       features: [
         'Luxury Swimming Pool Design',
         'Outdoor Kitchen & Dining Areas',
@@ -98,9 +98,9 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full pt-20">
+    <div className="min-h-screen w-full pt-20 bg-luxury-800">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gray-900 text-white">
+      <section className="py-20 lg:py-32 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Our Services
@@ -113,7 +113,7 @@ const ServicesPage: React.FC = () => {
 
       {/* Services Detail */}
       {services.map((service, index) => (
-        <section key={index} className={`py-20 lg:py-32 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+        <section key={index} className={`py-20 lg:py-32 ${index % 2 === 0 ? 'bg-luxury-50' : 'bg-luxury-100'}`}>
           <div className="max-w-7xl mx-auto px-6">
             <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               {/* Image */}
@@ -179,7 +179,7 @@ const ServicesPage: React.FC = () => {
       ))}
 
       {/* Why Choose Us */}
-      <section className="py-20 lg:py-32 bg-gray-900 text-white">
+      <section className="py-20 lg:py-32 bg-luxury-800 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-16 animate-fade-in-up">
             Why Choose Mason Vale

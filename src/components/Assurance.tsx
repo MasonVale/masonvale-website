@@ -17,37 +17,37 @@ const Assurance: React.FC = () => {
     {
       icon: Users, 
       title: 'Proficiency',
-      description: 'Skilled professionals delivering bespoke, high-end services. We empower clients with expert knowledge and guidance throughout the journey.'
+      description: 'Our team is composed of skilled professionals who are passionate about delivering bespoke, high-end services. You\'ll benefit from our deep knowledge and experience, empowering you to make confident well-informed decisions throughout your project.'
     },
     {
       icon: MessageCircle,
       title: 'Communication',
-      description: 'Clear, consistent communication with same-day responses to calls and emails. You\'ll always be in the loop.'
+      description: 'Clear, consistent communication is the cornerstone of a successful project. We keep you in the loop from start to finish, responding to your questions and feedback promptly with calls returned within a few hours and emails answered by the next working day.'
     },
     {
       icon: Award,
-      title: 'Reputation & Reliability',
-      description: '28+ years of combined experience from two trusted family businesses. Our foundation is built on trust, reliability, and consistent delivery.'
+      title: 'Reputation Reliability',
+      description: 'As a merged 2025 entity, our company brings together two trusted family businesses with over 28 years of combined experience in construction & specialist renovations. This integration unites decades of hands-on expertise, strong craftsmanship, and a reputation for reliability. Built on trust and favourable client relationships, we deliver dependable service, consistent quality, and innovative solutions across every project.'
     },
     {
       icon: Hammer,
       title: 'Craftsmanship',
-      description: 'Excellence is how we honour your investment. We raise the bar and deliver enduring results tailored to your vision.'
+      description: 'Excellence is how we honour your investment. As high-end full service construction and renovation specialists we set ambitious standards and consistently raise them, crafting tailored, enduring solutions that reflect your vision.'
     },
     {
       icon: Calendar,
-      title: 'Timelines & Budget',
-      description: 'Streamlined planning, proactive management, and swift problem-solving to keep your project on track.'
+      title: 'Project Timelines & Budget',
+      description: 'We prioritise your time and budget through a streamlined plan. Through proactive management and swift problem-solving, we navigate the dynamic nature of construction to keep your project on track.'
     },
     {
       icon: Eye,
       title: 'Discretion You Can Trust',
-      description: 'We work with high-net-worth clients. Photography is limited to protect client confidentiality. Portfolio available by private consultation.'
+      description: 'We engage with high-net-worth clients. Due to the private nature of our work, we limit the photographs we share publicly to respect our clients\' confidentiality. However, we are happy to present a detailed portfolio during a private face to face consultation.'
     },
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-luxury-50 to-luxury-100 relative overflow-hidden">
       {/* Background Graphics */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border-2 border-gold-300 rounded-full"></div>
@@ -67,17 +67,16 @@ const Assurance: React.FC = () => {
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative bg-luxury-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative mb-4">
+              <div className="relative mb-6">
                 <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
               </div>
               
               <div className="relative z-10">
-                <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">
+                <h3 className="font-serif text-xl font-bold text-gray-900 mb-3">
                   {pillar.title}
                 </h3>
                 
