@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-            <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(139, 150, 145, 0.3)', borderColor: '#8B9691' }}>
+            <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(139, 150, 145, 0.5)', borderColor: 'rgba(255, 255, 255, 0.1)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
@@ -98,7 +98,7 @@ const Navigation: React.FC = () => {
 
                        {/* Mobile Menu */}
                {isMenuOpen && (
-                 <div className="md:hidden py-6 border-t" style={{ backgroundColor: 'rgba(139, 150, 145, 0.3)', borderColor: '#8B9691' }}>
+                 <div className="md:hidden py-6 border-t" style={{ backgroundColor: 'rgba(139, 150, 145, 0.5)', borderColor: 'rgba(255, 255, 255, 0.1)' }}>
             <div className="flex flex-col space-y-4">
                                    <button 
                        onClick={() => handleNavigation('/')}

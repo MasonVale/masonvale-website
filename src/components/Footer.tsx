@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#77817E', borderColor: '#6A7470' }}>
+            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#8B9691', borderColor: '#6A7470' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -62,13 +62,13 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="text-center md:text-right">
-            <p className="font-sans text-gray-400 mb-2">
+            <p className="font-sans text-white mb-2">
               Copyright © 2025 Mason Vale. All rights reserved.
             </p>
-            <p className="font-sans text-gray-400 text-sm">
+            <p className="font-sans text-white text-sm">
               Jake Amrit
             </p>
-            <p className="font-sans text-gray-400 text-sm mt-1">
+            <p className="font-sans text-white text-sm mt-1">
               Dave Warah
             </p>
           </div>

@@ -20,19 +20,42 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto animate-fade-in-up w-full">
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          Creative Design &<br />
-          <span className="text-gold-400">Build Solution</span>
+      <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto w-full">
+        <h1 
+          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight opacity-0 animate-fade-in"
+          style={{ 
+            animationDelay: '0.2s', 
+            animationFillMode: 'forwards',
+            animationDuration: '1.2s',
+            animationTimingFunction: 'ease-out'
+          }}
+        >
+          Creative Design<br />
+          &<br />
+          <span className="text-gold-500">Build Solutions</span>
         </h1>
         
-        <p className="font-sans text-xl md:text-2xl lg:text-3xl font-light mb-12 opacity-90 max-w-3xl mx-auto">
+        <p 
+          className="font-sans text-2xl md:text-3xl lg:text-4xl font-light mb-12 opacity-90 max-w-3xl mx-auto opacity-0 animate-fade-in"
+          style={{ 
+            animationDelay: '0.5s', 
+            animationFillMode: 'forwards',
+            animationDuration: '1.2s',
+            animationTimingFunction: 'ease-out'
+          }}
+        >
           Tailored Transformations for Luxury Living
         </p>
         
         <button
           onClick={scrollToContact}
-          className="inline-flex items-center bg-gold-500 hover:bg-gold-400 text-black font-sans font-bold px-12 py-6 rounded-full text-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg mb-8"
+          className="inline-flex items-center bg-gold-500 hover:bg-gold-400 text-black font-sans font-bold px-12 py-6 rounded-full text-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg mb-8 opacity-0 animate-fade-in"
+          style={{ 
+            animationDelay: '0.8s', 
+            animationFillMode: 'forwards',
+            animationDuration: '1.2s',
+            animationTimingFunction: 'ease-out'
+          }}
         >
           <span>Let's Talk</span>
           <svg className="w-8 h-8 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

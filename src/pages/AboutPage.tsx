@@ -34,11 +34,13 @@ const AboutPage: React.FC = () => {
 
 
   return (
-    <div className="min-h-screen pt-20 bg-luxury-800">
+    <div className="min-h-screen bg-luxury-50">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 text-white">
+      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#8B9691' }}>
+        {/* Dark Overlay to match home page */}
+        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60"></div>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-4 animate-fade-in-up">
+          <div className="text-center mb-4 animate-fade-in-up sticky top-0 z-40">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
               About Mason Vale
             </h1>
@@ -69,7 +71,7 @@ const AboutPage: React.FC = () => {
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gold-500 p-4 rounded-xl shadow-lg">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-black">28+</div>
+                    <div className="text-2xl font-bold text-black">25+</div>
                     <div className="text-sm text-black">Years Combined</div>
                   </div>
                 </div>
@@ -84,8 +86,12 @@ const AboutPage: React.FC = () => {
                 We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
               </p>
               
-              <p className="font-sans text-lg leading-relaxed text-gray-700 mb-8">
+              <p className="font-sans text-lg leading-relaxed text-gray-700 mb-6">
                 These dedicated, skilled personnel enable us to deliver comprehensive, end-to-end services. In all aspects of construction, including new builds, alterations, extensions, refurbishments, swimming pools, bespoke outdoor creations, plus Smart home technologies and renewable solutions tailored to each client's needs.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                From the initial concept and customized planning to final execution, our clients are fully informed and guided through every stage of the project.
               </p>
             </div>
           </div>
@@ -139,21 +145,7 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Contact Info */}
-              <div className="mt-8 space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-gold-500" />
-                  <span className="font-sans text-gray-700">07767812992</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-gold-500" />
-                  <span className="font-sans text-gray-700">jake@mason-vale.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-gold-500" />
-                  <span className="font-sans text-gray-700">Serving the UK</span>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

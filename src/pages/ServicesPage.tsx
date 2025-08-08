@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: '/masonvale-website/project-images/12c63aa5-6ee6-4f2f-a405-ce4b1dd9383c.JPG',
+      image: '/masonvale-website/Development-Renovations.png',
       features: [
         'New Build Construction',
         'Period Property Restoration',
@@ -18,19 +18,17 @@ const ServicesPage: React.FC = () => {
         'Kitchen & Bathroom Renovations',
         'Full Property Refurbishments'
       ],
-      process: [
-        'Initial Consultation & Site Survey',
-        'Design Development & Planning',
-        'Permits & Regulatory Approval',
-        'Construction & Project Management',
-        'Quality Assurance & Handover'
-      ]
+      process: `Our work is grounded in close partnerships with respected architects and structural engineers, ensuring that every project benefits from a unified vision and technical excellence. We take pride in managing all build & renovation processes with efficiency, foresight, and a focus on the details that truly matter. Where we see opportunities for improvement, we're not afraid to challenge convention to deliver the best result for the client.
+
+Our expertise spans both traditional and contemporary construction methods from restoring period buildings to construction of modern living spaces designing and assembling precision-made components crafted off-site. This ability to combine craftsmanship with innovation allows us to deliver projects that are both technically outstanding and rich in character.
+
+We have delivered complete construction from substructure to superstructure, full restoration/renovations, and extensions, working with defined materials.`
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: '/masonvale-website/project-images/ec980f00-8f94-4829-ae1e-724f1189b70d.JPG',
+      image: '/masonvale-website/Tailored-Interiors.png',
       features: [
         'Luxury Interior Design',
         'Custom Furniture & Joinery',
@@ -41,19 +39,17 @@ const ServicesPage: React.FC = () => {
         'Space Planning & Optimization',
         'Bespoke Storage Solutions'
       ],
-      process: [
-        'Lifestyle & Needs Assessment',
-        'Concept Development & Mood Boards',
-        '3D Visualization & Presentations',
-        'Material & Furniture Procurement',
-        'Installation & Styling'
-      ]
+      process: `Each space is tailored to the client's vision, combining off-the-shelf solutions with bespoke elements to optimise both form and function. We also occasionally blend modern materials with reclaimed features to create interiors rich in character and individuality.
+
+Working closely with designers and architects, we bring refined, practical spaces to life with an unwavering focus on detail. Our in-house craftsmen including carpenters, tilers, and decorators collaborate with trusted specialists when needed to deliver the highest standards.
+
+Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms, each reflecting a thoughtful approach to materials, finishes, and craftsmanship.`
     },
     {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: '/masonvale-website/project-images/12f23b25-8db0-4b38-bb5d-1ea0908be0ea.JPG',
+      image: '/masonvale-website/Outdoor-Lifestyle.png',
       features: [
         'Luxury Swimming Pool Design',
         'Outdoor Kitchen & Dining Areas',
@@ -64,13 +60,7 @@ const ServicesPage: React.FC = () => {
         'Pergolas & Outdoor Structures',
         'Sustainable Landscaping'
       ],
-      process: [
-        'Site Analysis & Soil Testing',
-        'Landscape Design & Planning',
-        'Hardscape Construction',
-        'Planting & Softscape Installation',
-        'Maintenance Planning'
-      ]
+      process: `We design and craft exceptional outdoor living spaces that combine elegant landscaping, ambient garden lighting, and serene water features with beautifully integrated swimming pools. Every element from layout to finishing touches like custom barbecue islands is thoughtfully considered to elevate outdoor luxury.`
     },
     {
       icon: Zap,
@@ -87,21 +77,21 @@ const ServicesPage: React.FC = () => {
         'Integrated Audio/Visual',
         'Climate Control Systems'
       ],
-      process: [
-        'Energy Audit & Assessment',
-        'System Design & Integration',
-        'Technology Installation',
-        'System Configuration & Testing',
-        'Training & Ongoing Support'
-      ]
+      process: `Homes today are making the most of smart and sustainable technology to boost comfort, improve security, and reduce environmental impact. To get the best results, it's important to plan and integrate these systems right from the start of a project.
+
+These varied technologies require specialist installation processes, we have collaborative resources and experienced specialist skill sets to bring everything together so it all engages at the right time, with all the prep work done to keep the project running smoothly.
+
+We provide a wide range of modern systems for homes from heating, cooling, and ventilation solutions like Heat Pumps, Air Conditioning, to smart electrical features such as Automated Lighting, Home Control Systems, and Integrated Data Networks reaching to the levels of fully immersive high end experiences in beautifully designed Home Cinemas.`
     }
   ];
 
   return (
-    <div className="min-h-screen w-full pt-20 bg-luxury-800">
+    <div className="min-h-screen w-full bg-luxury-50">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 text-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#8B9691' }}>
+        {/* Dark Overlay to match home page */}
+        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60"></div>
+        <div className="max-w-7xl mx-auto px-6 text-center sticky top-0 z-40">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Our Services
           </h1>
@@ -122,7 +112,7 @@ const ServicesPage: React.FC = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-96 lg:h-[500px] object-cover"
+                    className="w-full h-[422px] lg:h-[550px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                   <div className="absolute top-6 left-6 w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center">
@@ -159,17 +149,12 @@ const ServicesPage: React.FC = () => {
                 {/* Process */}
                 <div>
                   <h3 className="font-serif text-2xl font-semibold text-gray-900 mb-6">
-                    Our Process
+                    Our Approach
                   </h3>
                   <div className="space-y-4">
-                    {service.process.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
-                          {stepIndex + 1}
-                        </div>
-                        <span className="font-sans text-gray-700 pt-1">{step}</span>
-                      </div>
-                    ))}
+                    <p className="font-sans text-gray-700 leading-relaxed whitespace-pre-line">
+                      {service.process}
+                    </p>
                   </div>
                 </div>
               </div>

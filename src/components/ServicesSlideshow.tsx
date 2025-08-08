@@ -7,21 +7,21 @@ const ServicesSlideshow: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: '/masonvale-website/project-images/12c63aa5-6ee6-4f2f-a405-ce4b1dd9383c.JPG',
+      image: '/masonvale-website/Development-Renovations.png',
       details: 'Transform your vision into reality with our full-service construction and renovation expertise.'
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: '/masonvale-website/project-images/ec980f00-8f94-4829-ae1e-724f1189b70d.JPG',
+      image: '/masonvale-website/Tailored-Interiors.png',
       details: 'Create stunning interiors that reflect your personal style and enhance your lifestyle.'
     },
     {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: '/masonvale-website/project-images/12f23b25-8db0-4b38-bb5d-1ea0908be0ea.JPG',
+      image: '/masonvale-website/Outdoor-Lifestyle.png',
       details: 'Design and build exceptional outdoor living spaces that extend your home seamlessly.'
     },
     {

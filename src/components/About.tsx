@@ -50,8 +50,12 @@ const About: React.FC = () => {
               We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
             </p>
             
-            <p className="font-sans text-lg leading-relaxed text-gray-700">
+            <p className="font-sans text-lg leading-relaxed text-gray-700 mb-8">
               These dedicated, skilled personnel enable us to deliver comprehensive, end-to-end services. In all aspects of construction, including new builds, alterations, extensions, refurbishments, swimming pools, bespoke outdoor creations, plus Smart home technologies and renewable solutions tailored to each client's needs.
+            </p>
+            
+            <p className="font-sans text-lg leading-relaxed text-gray-700">
+              From the initial concept and customized planning to final execution, our clients are fully informed and guided through every stage of the project.
             </p>
           </div>
 

@@ -4,9 +4,11 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucid
 const ContactPage: React.FC = () => {
 
   return (
-    <div className="min-h-screen w-full pt-20 bg-luxury-800">
+    <div className="min-h-screen w-full bg-luxury-50">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 text-white">
+      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#8B9691' }}>
+        {/* Dark Overlay to match home page */}
+        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60"></div>
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Get In Touch
@@ -20,9 +22,9 @@ const ContactPage: React.FC = () => {
       {/* Contact Form & Info */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
-            <div className="animate-slide-in-right">
+            <div className="animate-slide-in-left">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 Contact Information
               </h2>
@@ -116,6 +118,37 @@ const ContactPage: React.FC = () => {
                   >
                     <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-black" />
                   </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Maps */}
+            <div className="animate-slide-in-right">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Find Us
+              </h2>
+              <p className="font-sans text-lg text-gray-600 mb-8">
+                Visit our office in the heart of London's West End
+              </p>
+              
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8987!2d-0.1436!3d51.5174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTFzMCcwMi4yIk4gMMKwMDgnMzYuOSJX!5e0!3m2!1sen!2suk!4v1234567890"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mason Vale Office Location"
+                  className="w-full"
+                ></iframe>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <div className="inline-flex items-center space-x-2 bg-gold-500 text-black font-sans font-semibold px-6 py-3 rounded-full">
+                  <MapPin className="w-5 h-5" />
+                  <span>167–169 Great Portland Street, London W1</span>
                 </div>
               </div>
             </div>

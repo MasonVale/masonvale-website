@@ -31,18 +31,18 @@ const Assurance: React.FC = () => {
     },
     {
       icon: Hammer,
-      title: 'Craftsmanship',
-      description: 'Excellence is how we honour your investment. As high-end full service construction and renovation specialists we set ambitious standards and consistently raise them, crafting tailored, enduring solutions that reflect your vision.'
-    },
-    {
-      icon: Calendar,
-      title: 'Project Timelines & Budget',
-      description: 'We prioritise your time and budget through a streamlined plan. Through proactive management and swift problem-solving, we navigate the dynamic nature of construction to keep your project on track.'
+      title: 'Craftsmanship & Project Management',
+      description: 'Excellence is how we honour your investment. As high-end full service construction and renovation specialists we set ambitious standards and consistently raise them, crafting tailored, enduring solutions that reflect your vision. We prioritise your time and budget through a streamlined plan. Through proactive management and swift problem-solving, we navigate the dynamic nature of construction to keep your project on track.'
     },
     {
       icon: Eye,
       title: 'Discretion You Can Trust',
       description: 'We engage with high-net-worth clients. Due to the private nature of our work, we limit the photographs we share publicly to respect our clients\' confidentiality. However, we are happy to present a detailed portfolio during a private face to face consultation.'
+    },
+    {
+      icon: Shield,
+      title: 'Peace of Mind',
+      description: 'We hold comprehensive Public Liability Insurance, specifically tailored to cover construction projects and specialist renovation works. This ensures protection for our clients, partners, and the public throughout the duration of our projects.'
     },
   ];
 
@@ -63,16 +63,27 @@ const Assurance: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-8xl mx-auto">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="group relative bg-luxury-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative bg-luxury-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full"
             >
               <div className="relative mb-6">
-                <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <pillar.icon className="w-8 h-8 text-white" />
-                </div>
+                {pillar.title === 'Craftsmanship & Project Management' ? (
+                  <div className="flex items-start space-x-3">
+                    <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Hammer className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Calendar className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <pillar.icon className="w-8 h-8 text-white" />
+                  </div>
+                )}
               </div>
               
               <div className="relative z-10">
